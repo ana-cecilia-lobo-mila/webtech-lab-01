@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana C Lobo</title>
+    <title>Ana Cecilia Lobo</title>
+    <link rel="icon" type="image/x-icon" href="./img/ana.jpeg">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <img>
-
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -20,26 +20,33 @@
     </header>
 
     <main id="home">
-        <img>
+        <div class="home-img">
+            <img src="./img/ana.jpeg" alt="imagen caricaturizada de Ana Cecilia Lobo">
+        </div>
+        
+        <div class="home-body">
+            <h1>Ana Cecilia Lobo</h1>
 
-        <h1>Ana Cecilia Lobo</h1>
+            <h2>Computer Science | 2024</h2>
 
-        <h2>Ingeniería Civil en Ciencias de la Computación | 2024</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci officia quos ipsum itaque assumenda nihil iusto distinctio id! Placeat expedita mollitia ipsam veniam perspiciatis voluptatum quis totam culpa in maxime!</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci officia quos ipsum itaque assumenda nihil iusto distinctio id! Placeat expedita mollitia ipsam veniam perspiciatis voluptatum quis totam culpa in maxime!</p>
-
-        <aside>
-            <a href="https://linkedin.com">LinkedIn</a>
-            <a href="https://github.com">GitHub</a>
-            <a href="">Repositorio</a>
-        </aside>
+            <aside>
+                <a href="https://linkedin.com">LinkedIn</a>
+                <a href="https://github.com">GitHub</a>
+                <a href="">Repositorio</a>
+            </aside>
+        </div>
     </main>
 
     <section id="skills">
-        <h2>My skills</h2>
+        <div class="skill-head">
+            <h2>My skills</h2>
+        </div>
 
-        <div class="skillsCarousel">
-            <div class="skillCard">
+
+        <div class="skills-carousel">
+            <div class="skill-card">
                 <div class="code">
                     <span class="pink"> &lt;html&gt;</span>
                     <span class="blue">portfolio</span>
@@ -48,7 +55,7 @@
                 <h3>HTML Y CSS</h3>
             </div>
 
-            <div class="skillCard">
+            <div class="skill-card">
                 <div class="code">
                     <span class="purple">def</span>
                     <span class="blue"> hello</span>
@@ -62,7 +69,7 @@
                 <h3>Python</h3>
             </div>
 
-            <div class="skillCard">
+            <div class="skill-card">
                 <div class="code">
                     <span class="purple">const</span>
                     <span class="blue"> app</span>
@@ -74,7 +81,7 @@
                 <h3>JavaScript</h3>
             </div>
 
-            <div class="skillCard">
+            <div class="skill-card">
                 <div class="code">
                     <span class="purple">SELECT</span>
                     <span class="white"> * </span>
@@ -85,21 +92,79 @@
                 <h3>SQL</h3>
             </div>
 
-            <div class="skillCard">
+            <div class="skill-card">
                 <div class="code">
-                    <span class="purple">#include</span>
-                    <span class="blue"> iostream</span>;
-                    <br><br>
                     <span class="purple">int</span> 
                     <span class="yellow">main</span>
                     <span class="white">() {</span>
                     <br>
                     <span class="blue">std::cout</span> 
-                    <span class="orange">"Hello World!"</span>;
+                    <span class="orange">"Hi!"</span>;
                     <br>
                     <span class="purple">return</span> 
                     <span class="white">0;</span>
+                    <span class="white">}</span>
+                </div>
+                <h3>C / C++</h3>
+            </div>
+
+            <div class="skill-card">
+                <div class="code">
+                    <span class="pink"> &lt;html&gt;</span>
+                    <span class="blue">portfolio</span>
+                    <span class="pink">&lt;/html&gt;</span>
+                </div>
+                <h3>HTML Y CSS</h3>
+            </div>
+
+            <div class="skill-card">
+                <div class="code">
+                    <span class="purple">def</span>
+                    <span class="blue"> hello</span>
+                    <span class="white">():</span>
                     <br>
+                    <span class="green">print</span>
+                    <span class="white">(</span>
+                    <span class="orange">"Hi!"</span>
+                    <span class="white">)</span>
+                </div>
+                <h3>Python</h3>
+            </div>
+
+            <div class="skill-card">
+                <div class="code">
+                    <span class="purple">const</span>
+                    <span class="blue"> app</span>
+                    <span class="white"> = () =&gt; { </span>
+                    <br>
+                    <span class="green">return</span>
+                    <span class="white">true; }</span>
+                </div>
+                <h3>JavaScript</h3>
+            </div>
+
+            <div class="skill-card">
+                <div class="code">
+                    <span class="purple">SELECT</span>
+                    <span class="white"> * </span>
+                    <br>
+                    <span class="purple">FROM</span>
+                    <span class="blue"> projects</span>;
+                </div>
+                <h3>SQL</h3>
+            </div>
+
+            <div class="skill-card">
+                <div class="code">
+                    <span class="purple">int</span> 
+                    <span class="yellow">main</span>
+                    <span class="white">() {</span>
+                    <br>
+                    <span class="blue">std::cout</span> 
+                    <span class="orange">"Hi!"</span>;
+                    <br>
+                    <span class="purple">return</span> 
+                    <span class="white">0;</span>
                     <span class="white">}</span>
                 </div>
                 <h3>C / C++</h3>
@@ -109,82 +174,86 @@
 
     <section id="projects">
 
-        <div class="projectsHeader">
+        <div class="projects-head">
             <h2>Courses & Projects</h2>
         </div>
         
-        <div class="projectsBody">
+        <div class="projects-body">
 
             <article>
                 <figure>
-                    <img>
-                    <figcaption></figcaption>
+                    <img src="./img/desarrolloWeb.jpg" alt="Web Design certificate">
+                    <figcaption>Web Design certificate</figcaption>
                 </figure>
 
                 <div>
-                    <h3>Nombre del Proyecto 1</h3>
+                    <h3>Web Design</h3>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sequi id eligendi natus quo excepturi, quidem veniam. Dignissimos possimus nihil ex, vel delectus excepturi corrupti molestiae reprehenderit error necessitatibus est.</p>
+                    <p>Course of Web Design | Coderhouse | 2022</p>
                 </div>
             </article>
 
             <article>
                 <figure>
-                    <img>
-                    <figcaption></figcaption>
+                    <img src="./img/js.jpg" alt="JavaScript certificate">
+                    <figcaption>JavaScript certificate</figcaption>
                 </figure>
 
                 <div>
-                    <h3>Nombre del Proyecto 1</h3>
+                    <h3>Javascript</h3>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sequi id eligendi natus quo excepturi, quidem veniam. Dignissimos possimus nihil ex, vel delectus excepturi corrupti molestiae reprehenderit error necessitatibus est.</p>
+                    <p>Course of Javascript | Coderhouse | 2023</p>
                 </div>
             </article>
 
             <article>
                 <figure>
-                    <img>
-                    <figcaption></figcaption>
+                    <img src="./img/backend.jpg" alt="backend certificate">
+                    <figcaption>backend certificate</figcaption>
                 </figure>
 
                 <div>
-                    <h3>Nombre del Proyecto 1</h3>
+                    <h3>Backend</h3>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sequi id eligendi natus quo excepturi, quidem veniam. Dignissimos possimus nihil ex, vel delectus excepturi corrupti molestiae reprehenderit error necessitatibus est.</p>
+                    <p>Course of Backend | Coderhouse | 2023</p>
                 </div>
             </article>
 
             <article>
                 <figure>
-                    <img>
-                    <figcaption></figcaption>
+                    <img src="./img/kutral.jpg" alt="kutral">
+                    <figcaption>Kutral</figcaption>
                 </figure>
 
                 <div>
-                    <h3>Nombre del Proyecto 1</h3>
+                    <h3>Kutral</h3>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sequi id eligendi natus quo excepturi, quidem veniam. Dignissimos possimus nihil ex, vel delectus excepturi corrupti molestiae reprehenderit error necessitatibus est.</p>
+                    <p>Project | Kutral | 2024-2025</p>
                 </div>
             </article>
         </div>
     </section>
 
     <section id="contact">
-        <h2>Contact me</h2>
+        <div class="contact-head">
+            <h2>Contact me</h2>
+        </div>
         
-        <form>
-            <label for="nombre">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-  
+        <div class="contact-body">
+            <form>
+                <label for="nombre">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+    
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="someone@email.com">
 
-            <label for="mensaje">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="mensaje">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
 
-            <button type="submit">Send</button>
-        </form>
+                <button type="submit">SEND</button>
+            </form>
+        </div>
     </section>  
 
     <footer>
