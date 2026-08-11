@@ -21,9 +21,9 @@ nav ul li{
     padding: 1rem;
     background: #b8754f;
     border: 1px solid rgba(76,50,35,.25);
-    box-shadow: 0 4px 0 rgba(91,61,42,.22), 0 7px 12px rgba(48, 31, 20, .28);
+    box-shadow: 8px 10px 0 rgba(60,39,27,.18), 0 8px 20px rgba(48, 31, 20, .28);
     transform: rotate(-1deg);
-    transition: .25s ease;
+    transition: 0.25s ease;
 }
 
 nav ul li:nth-child(2){
@@ -138,21 +138,28 @@ aside a:hover{
 
 .skills-carousel {
     margin-top: 3rem;
-    display: flex;
-    gap: 25px;
-    animation: scroll 20s linear infinite;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 3rem 1rem;
 }
 
 .skill-card {
-    width: 17rem;
+    width: 18rem;
     min-height: 10rem;
     padding: 1.5rem;
     background: repeating-linear-gradient(90deg, transparent 0 4px, rgba(100,70,45,.025) 4px 5px), #f2e7d0;
     border: 1px solid #b7956e;
-    box-shadow: 0 9px 20px rgba(48, 31, 20, .28);
+    box-shadow: 7px 8px 0 rgba(63,40,26,.18);
     transform: rotate(-.25deg);
     border-radius: 18px;
     flex-shrink: 0;
+}
+
+.skill-card:hover{
+    transform: translateY(-3px) rotate(0);
 }
 
 .code {
@@ -198,16 +205,6 @@ aside a:hover{
     color: white;
 }
 
-
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-}
 
 .projects-head{
     text-align: center;
