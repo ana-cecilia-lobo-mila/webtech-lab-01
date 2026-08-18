@@ -14,6 +14,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Courses & projects</a></li>
+                <li><a href="#collection">Hobbies</a></li>
                 <li><a href="#contact">Contact me</a></li>
             </ul>
         </nav>
@@ -182,21 +183,38 @@
         </div>
         
         <div class="contact-body">
-            <form>
+            <form id="contact-form">
                 <label for="nombre">Full Name:</label>
                 <input type="text" id="name" name="name" placeholder="Your Name">
-    
+                <span id="name-error" class="error"></span>
 
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" placeholder="someone@email.com">
+                <span id="email-error" class="error"></span>
 
                 <label for="mensaje">Message:</label>
                 <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+                <span id="message-error" class="error"></span>
 
                 <button type="submit">SEND</button>
+                <p id="form-success"></p>
             </form>
         </div>
     </section>  
+
+    <div class="music-bubble">
+
+        <button id="music-toggle" type="button" aria-expanded="false">
+            ♫ Currently listening
+        </button>
+
+        <div id="music-panel" class="music-panel">
+            <p class="song">Walk</p>
+            <p class="artist">Foo Fighters</p>
+            <img  class="music-img "src="./img/walk.png" alt="Foo fighters album">
+        </div>
+
+    </div>
 
     <footer>
         <h3>© 2026 Ana Cecilia Lobo</h3>

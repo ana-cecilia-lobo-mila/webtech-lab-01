@@ -398,17 +398,133 @@ aside a:hover{
     border-color: #6f5544;
 }
 
+.no-options {
+    text-align: center;
+    padding: 2rem;
+    color: #8b6f5a;
+    font-style: italic;
+    font-size: 1rem;
+}
 
 
+.add-hobby {
+    padding: 1rem;
+    border: 2px solid #8b6f5a;
+    border-radius: 8px;
+    background: #faf7ed;
+    color: #4a382d;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.add-hobby:hover {
+    background: #e8dcc8;
+    transform: translateY(-2px);
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(74, 56, 45, 0.45);
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.add-form {
+    width: 90%;
+    padding: 2rem;
+    background: #faf7ed;
+    border: 2px solid #8b6f5a;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(74, 56, 45, 0.25);
+}
+
+.add-form input,
+.add-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 2px solid #cdb99f;
+    border-radius: 6px;
+    background-color: #fffdf5;
+    color: #4a382d;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.add-form input::placeholder,
+.add-form textarea::placeholder {
+    color: #8b6f5a;
+    opacity: 0.7;
+}
+
+.add-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.add-form button {
+    display: block;
+    margin: 0.5rem auto 0;
+    padding: 0.7rem 2rem;
+    border: 2px solid #8b6f5a;
+    border-radius: 7px;
+    background-color: #8b6f5a;
+    color: #faf7ed;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-form button:hover {
+    background-color: #6f5544;
+    transform: translateY(-2px);
+}
 
 
+.hobbies p {
+    transition: font-size 0.2s ease;
+}
+
+.hobbies p.big {
+    font-size: 1.5rem;
+}
+
+.hobbies h3.big {
+    font-size: 2.5rem;
+}
 
 
+.expand {
+    display: block;
+    margin: 1rem 0 0 auto;
+    padding: 0.5rem;
+    border: 1px solid #8b6f5a;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #8b6f5a;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
 
-
-
-
-
+.expand:hover {
+    background-color: #e8dcc8;
+    color: #4a382d;
+    transform: translateY(-1px);
+}
 
 
 .contact-head{
@@ -473,6 +589,72 @@ input, textarea {
     transform: translateY(-3px) rotate(0);
 }
 
+.error {
+    display: block;
+    margin-top: 0.5rem;
+    color: #9b4d4d;
+    background-color: #f5e8d1;
+    font-size: 1rem;
+}
+
+#form-success {
+    color: #6f5544;
+    font-weight: 600;
+}
+
+
+.music-bubble {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+#music-toggle {
+    padding: 0.5rem 1rem;
+    border: 2px solid #8b6f5a;
+    border-radius: 50px;
+    background-color: #faf7ed;
+    color: #4a382d;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#music-toggle:hover {
+    background-color: #e8dcc8;
+}
+
+.music-panel {
+    display: none;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    min-width: 180px;
+    background-color: #faf7ed;
+    border: 2px solid #8b6f5a;
+    border-radius: 15px;
+    box-shadow: 4px 4px 0 #cdb99f;
+}
+
+.music-panel.open {
+    display: block;
+}
+
+.song {
+    margin: 0;
+    font-weight: 700;
+}
+
+.artist {
+    margin: 0.5rem 0 0;
+    color: #8b6f5a;
+    font-size: 1rem;
+}
+
+.music-img{
+    height: 4rem;
+}
+
+
 footer{
     margin-top: 5rem;
     padding: 2rem 5rem;
@@ -530,6 +712,12 @@ footer a{
         font-size: 0.8rem;
     }
 
+    .skills-carousel {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+
     .projects-body {
         width: 90%;
     }
@@ -549,6 +737,11 @@ footer a{
     .projects-body article div p{
         font-size: 0.8rem;
     }
+
+    #collection-body{
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
 }
 
 @media (max-width: 850px) {
@@ -565,6 +758,11 @@ footer a{
     aside a{
         padding: 0.6rem;
         font-size: 0.6rem;
+    }
+
+    .skills-carousel {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
     }
 
     .projects-body{
@@ -592,6 +790,11 @@ footer a{
         font-size: 1rem;
     }
 
+    #collection-body{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
     .contact-body form{
         margin: 1.5rem;
     }
@@ -599,6 +802,7 @@ footer a{
     input, textarea {
         width: 90%;
     }
+
 
 }
 
@@ -610,9 +814,6 @@ footer a{
         justify-self: center;
     }
 
-    .skills-carousel {
-        gap: 15px;
-    }
 
     .skill-card {
         width: 12rem;
