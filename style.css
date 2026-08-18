@@ -273,6 +273,144 @@ aside a:hover{
     color: #f6ead6;
 }
 
+.collection-head{
+    text-align: center;
+    margin-top: 5rem;
+    margin: 5rem auto;
+}
+
+#collection h2{
+    display: inline-block;
+    padding: 1rem;
+    background: #f2e7d0;
+    box-shadow: 4px 5px 0 rgba(81,54,36,.16);
+    transform: rotate(-1deg);
+}
+
+#collection-body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem 2rem;
+    width: 80%;
+    margin: auto;
+    
+}
+
+.hobbies {
+    position: relative;
+    padding: 1rem;
+    background-color: #fffdf5;
+    border-radius: 10px;
+}
+
+.paper-lines {
+    padding:  8rem 2rem 2rem 2rem;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 31px,
+        #b8d4e8 32px
+    );
+
+    background-position: center;
+}
+
+.paper-lines div p{
+    margin-bottom: 2rem;
+}
+
+.paper-lines div h3{
+    text-transform: uppercase;
+}
+
+
+.hobbies figure {
+    position: absolute;
+    top: -25px;
+    right: 20px;
+    margin: 0;
+}
+
+.hobbies figure img{
+    height: 7rem;
+    padding: 1rem;
+    background: #86583c;
+    border: 8px solid #6e472f;
+    box-shadow: 8px 10px 0 rgba(60,39,27,.18), 0 8px 20px rgba(48, 31, 20, .28);
+    transform: rotate(5deg);
+    display: block;
+    border-radius: 10px;
+}
+
+.hobbies figure img:hover {
+    transform: translateY(-5px) rotate(0);
+}
+
+
+.tag{
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    color: white;
+    padding: 1rem;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    background: #4A382D;
+}
+
+.music{
+    background:#e1d3a6;
+    color: black;
+}
+
+.entertainment{
+    background:#E8DCC8;
+    color: black;
+}
+
+.sport{
+    background:#CDB99F;
+}
+
+.technology{
+    background:#8B6F5A;
+}
+
+#buscar{
+    width: 50%;
+    margin: 1rem;
+}
+
+
+#filtro-tag {
+    padding:1rem;
+    border: 2px solid #8b6f5a;
+    border-radius: 8px;
+    background-color: #faf7ed;
+    color: #4a382d;
+    font-weight: 600;
+}
+
+#filtro-tag:hover {
+    background-color: #e8dcc8;
+    border-color: #6f5544;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .contact-head{
     text-align: center;
     margin: 5rem 0 2rem 0;
