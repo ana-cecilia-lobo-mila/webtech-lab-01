@@ -50,7 +50,7 @@ const collection = document.getElementById("collection");
 //collection body
 const collection_body = document.getElementById("collection-body");
 
-collection_body.innerHTML = "";
+collection_body.replaceChildren();
 
 
 //Collection header
@@ -103,7 +103,7 @@ head.appendChild(busqueda);
 //Agregar hobbies
 function mostrarHobbies(datos) {
 
-    collection_body.innerHTML = "";
+    collection_body.replaceChildren();
 
     if (datos.length === 0) {
         const no = document.createElement("div");
@@ -381,3 +381,88 @@ musicToggle.addEventListener("click", () => {
 
     musicToggle.setAttribute("aria-expanded", expanded);
 });
+
+
+// WHEELHOUSE API
+
+const WHEELHOUSE_API_URL = "http://localhost:3000/api/v1/services";
+
+const servicesStatus = document.getElementById("services-status");
+const servicesList = document.getElementById("services-list");
+
+const serviceIdInput = document.getElementById("service-id");
+const serviceSearchButton = document.getElementById("service-search-button");
+const serviceResult = document.getElementById("service-result");
+
+
+function formatPrice(price) {
+    return new Intl.NumberFormat("en-US", {style: "currency", currency: "CLP", minimumFractionDigits: 2}).format(Number(price));
+}
+
+
+async function loadServices() {
+    servicesStatus.textContent = "Loading services...";
+    servicesList.replaceChildren();
+
+    try {
+        const response = await fetch(WHEELHOUSE_API_URL);
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            servicesStatus.textContent = errorData.errors.join(", ");
+            return;
+        }
+
+        const services = await response.json();
+
+        servicesStatus.textContent = "";
+
+        services.forEach(service => {
+            const serviceItem = document.createElement("p");
+
+            serviceItem.textContent =
+                `${service.name} — ${formatPrice(service.price)}`;
+
+            servicesList.appendChild(serviceItem);
+        });
+
+    } catch (error) {
+        servicesStatus.textContent =
+            "The service list could not be loaded. Please try again later.";
+    }
+}
+
+
+async function findService() {
+    serviceResult.textContent = "";
+
+    const serviceId = serviceIdInput.value;
+
+    if (serviceId === "") {
+        serviceResult.textContent = "Please enter a service ID.";
+        return;
+    }
+
+    try {
+        const response = await fetch(
+            `${WHEELHOUSE_API_URL}/${serviceId}`
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            serviceResult.textContent = data.errors.join(", ");
+            return;
+        }
+
+        serviceResult.textContent = `${data.name} — ${formatPrice(data.price)} — ` + `${data.repairs_count} repairs`;
+
+    } catch (error) {
+        serviceResult.textContent = "The service could not be loaded. Please try again later.";
+    }
+}
+
+
+serviceSearchButton.addEventListener("click", findService);
+
+loadServices();
